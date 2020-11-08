@@ -3,7 +3,15 @@ h1 {
     "Lucida Sans", Arial, sans-serif;
   color: #645f78;
   font-weight: bold;
+  font-size: 35px;
 }
 img.src {
   font-size: 10px;
+}
+
+.weather-forecast {
+  max-width: 600px;
+  margin: 0 auto;
+  padding 15px;
+
 }
