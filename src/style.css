@@ -9,11 +9,24 @@ h1 {
   width: 618px;
   font-size: 24px;
 }
+h2 {
+  color: #878787;
+  font-weight: 100px;
+  width: 500px;
+  font-size: 24px;
+}
 
 p {
   max-width: 650px;
   margin: 0 auto;
   padding: 15px;
+}
+
+li {
+  list-style: none;
+  text-align: right;
+  margin-right: 30px;
+  padding: 0;
 }
 
 .container {
@@ -22,6 +35,10 @@ p {
   margin: 0 auto;
   padding: 25px;
 }
-.row.col-md-6.img {
-  font-style: 20px;
+.today,
+.skies {
+  color: #878787;
+  font-weight: 100px;
+  width: 618px;
+  font-size: 20px;
 }
