@@ -27,6 +27,7 @@ li {
   text-align: right;
   margin-right: 30px;
   padding: 0;
+  color: #878787;
 }
 
 .container {
@@ -40,5 +41,5 @@ li {
   color: #878787;
   font-weight: 100px;
   width: 618px;
-  font-size: 20px;
+  font-size: 15px;
 }
