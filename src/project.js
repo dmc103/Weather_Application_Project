@@ -1,5 +1,7 @@
 function displayTemp(response) {
-    console.log(response.data.main.temp);
+    let tempElement = document.querySelector("#temp");
+    tempElement.innerHTML = response.data.main.temp;
+
 
 }
 

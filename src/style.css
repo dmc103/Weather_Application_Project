@@ -3,7 +3,7 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-h1.city {
+h1 {
   color: #645f78;
   font-weight: bold;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -11,7 +11,7 @@ h1.city {
   width: 618px;
   font-size: 24px;
 }
-h2.country,
+h2,
 .temp {
   color: #878787;
   font-weight: bold;
