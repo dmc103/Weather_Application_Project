@@ -1,6 +1,6 @@
 function displayTemp(response) {
-    let tempElement = document.querySelector("#temp");
-    tempElement.innerHTML = response.data.main.temp;
+    let temperature = document.querySelector("#temp");
+    temperature.innerHTML = response.data.main.temp;
 
 
 }
