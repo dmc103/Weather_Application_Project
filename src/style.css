@@ -38,10 +38,12 @@ li {
 .container {
   border: 1px solid #cac8ca;
   max-width: 650px;
-  text-transform: capitalize;
   margin: 0 auto;
+  text-transform: capitalize;
   padding: 25px;
+  color: #878787;
 }
+
 .today,
 .skies {
   color: #878787;
