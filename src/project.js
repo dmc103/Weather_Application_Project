@@ -7,7 +7,16 @@ function displayTemp(response) {
     h1.innerHTML = response.data.name;
 
     let h2 = document.querySelector("h2");
-    h2.innerHTML = response.data.sys.country
+    h2.innerHTML = response.data.sys.country;
+
+    let skies = document.querySelector("#skies");
+    skies.innerHTML = response.data.weather[0].description;
+
+    let humid = document.querySelector("#humid");
+    humid.innerHTML = response.data.main.humidity;
+
+    let wind = document.querySelector("#wind");
+    wind.innerHTML = Math.round (response.data.wind.speed);
 
 
 }
