@@ -37,6 +37,9 @@ function displayTemp(response) {
     let today = document.querySelector("#today");
     today.innerHTML = formatDate(response.data.dt*1000);
 
+    let icon = document.querySelector("#icon");
+    icon.setAttribute("src",`http://openweathermap.org/img/wn/04n@2x.png`); 
+
 
 }
 
