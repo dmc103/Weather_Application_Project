@@ -1,6 +1,13 @@
 function displayTemp(response) {
+    console.log(response.data);
     let temperature = document.querySelector("#temperature");
-    temperature.innerHTML = response.data.main.temp;
+    temperature.innerHTML = Math.round (response.data.main.temp);
+
+    let h1 = document.querySelector("h1");
+    h1.innerHTML = response.data.name;
+
+    let h2 = document.querySelector("h2");
+    h2.innerHTML = response.data.sys.country
 
 
 }
