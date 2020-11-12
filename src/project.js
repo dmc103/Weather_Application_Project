@@ -44,11 +44,25 @@ function displayTemp(response) {
 }
 
 
-let apiKey = `bf2bdff99ecfdbc9e74d435ee65cf081`;
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Rotterdam&appid=${apiKey}&units=metric`;
+function search(city) {
+    let apiKey = `bf2bdff99ecfdbc9e74d435ee65cf081`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemp);
+    axios.get(apiUrl).then(displayTemp);
+}
 
+
+function handleSubmit(event) {
+    event.preventDefault();
+    let searching = document.querySelector("#searching");
+    search(searching.value);
+}
+
+
+search("Rotterdam");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
 
 
 
