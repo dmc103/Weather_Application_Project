@@ -14,18 +14,24 @@
         <div class="row">
             <div class="col-9">
             <input type="search" placeholder="Search for a city here.." class="form-control"
-            id="searching">
+            id="searching" autocomplete="off">
             </div>
             <div class="col-3">
-                <input type="submit" value="Go" class="btn btn-primary" w-90/>
+                <input type="submit" value="Go" class="btn btn-primary" w-100/>
             </div>
         </div>
     </form>
+    <div class="col-4">
     <h1></h1>
     <h2></h2>
-    <div id="today">Monday, 17:00</div>
-    <div id="skies"></div>
-    <h2 id="temperature"></h2>
+        <div id="today">Monday, 17:00</div>
+        <div id="skies"></div>
+        <div class = float-left>
+            <strong id="temperature"></strong>
+            <span class="units"><a href="#" id="celsius-link" class="active">°C</a> |
+            <a href="#" id="fahrenheit-link">°F</a></span>
+        </div>
+    </div>
     <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" id="icon"/>
     <div class="col-md-12">
         <ul>
