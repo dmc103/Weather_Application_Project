@@ -16,30 +16,29 @@ function formatDate(timestamp) {
 
 
 function displayTemp(response) {
+    
     let temperature = document.querySelector("#temperature");
-    temperature.innerHTML = Math.round (response.data.main.temp);
-
     let h1 = document.querySelector("h1");
-    h1.innerHTML = response.data.name;
-
     let h2 = document.querySelector("h2");
-    h2.innerHTML = response.data.sys.country;
-
     let skies = document.querySelector("#skies");
-    skies.innerHTML = response.data.weather[0].description;
-
     let humid = document.querySelector("#humid");
-    humid.innerHTML = response.data.main.humidity;
-
     let wind = document.querySelector("#wind");
-    wind.innerHTML = Math.round (response.data.wind.speed);
-
     let today = document.querySelector("#today");
-    today.innerHTML = formatDate(response.data.dt*1000);
-
     let icon = document.querySelector("#icon");
+    
+    celsiusTemp = response.data.main.temp;
+
+    
+    temperature.innerHTML = Math.round(celsiusTemp);
+    h1.innerHTML = response.data.name;
+    h2.innerHTML = response.data.sys.country;
+    skies.innerHTML = response.data.weather[0].description;
+    humid.innerHTML = response.data.main.humidity;
+    wind.innerHTML = Math.round(response.data.wind.speed);
+    today.innerHTML = formatDate(response.data.dt*1000);
     icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
     icon.setAttribute("alt", response.data.weather[0].description);
+
 
 
 }
@@ -59,11 +58,32 @@ function handleSubmit(event) {
     search(searching.value);
 }
 
+function displayFahrenheit(event) {
+    event.preventDefault();
+    let fahrenheit = (celsiusTemp * 9) / 5 + 32;
+    let temperature = document.querySelector ("#temperature");
+    temperature.innerHTML = Math.round(fahrenheit);
+}
 
-search("Rotterdam");
+
+function displayCel(event) {
+    let celsius = celsiusTemp;
+    let temperature = document.querySelector ("#temperature");
+    temperature.innerHTML = Math.round(celsius);
+}
+
+
+let celsiusTemp = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 
+let fahLink = document.querySelector ("#fah-link");
+fahLink.addEventListener ("click",displayFahrenheit);
 
+let celLink = document.querySelector ("#cel-link");
+celLink.addEventListener("click",displayCel);
+
+
+search("Rotterdam");
