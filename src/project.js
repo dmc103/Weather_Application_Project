@@ -60,12 +60,9 @@ function displayForecast(response) {
                 <strong>${Math.round(forecast.main.temp_max)}° |
                 </strong> ${Math.round(forecast.main.temp_min)}°
             </div>
-        </div>
-        `;
+        </div>`;
     }
 }
-
-
 
 function search(city) {
     let apiKey = `bf2bdff99ecfdbc9e74d435ee65cf081`;
