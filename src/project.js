@@ -45,11 +45,12 @@ function displayTemp(response) {
 
 function displayForecast(response) {
     let forecastHour = document.querySelector ("#forecast");
-    let forecast = response.data.list[0];
-    console.log(forecast);
+    let forecast = null;
 
-
-    forecastHour.innerHTML = `<div class="col-2">
+    for (let index = 0; index < 6; index++) {
+        forecast = response.data.list[index];
+        forecastHour.innerHTML += 
+        `<div class="col-2">
             <h5>
                 ${formatTime(forecast.dt * 1000)}
             </h5>
@@ -58,7 +59,9 @@ function displayForecast(response) {
                 <strong>${Math.round(forecast.main.temp_max)}° |
                 </strong> ${Math.round(forecast.main.temp_min)}°
             </div>
-        </div>`;
+        </div>
+        `;
+    }
 }
 
 
@@ -86,13 +89,11 @@ function displayFahrenheit(event) {
     temperature.innerHTML = Math.round(fahrenheit);
 }
 
-
 function displayCel(event) {
     let celsius = celsiusTemp;
     let temperature = document.querySelector ("#temperature");
     temperature.innerHTML = Math.round(celsius);
 }
-
 
 let celsiusTemp = null;
 
@@ -105,6 +106,5 @@ fahLink.addEventListener ("click",displayFahrenheit);
 
 let celLink = document.querySelector ("#cel-link");
 celLink.addEventListener("click",displayCel);
-
 
 search("Rotterdam");
