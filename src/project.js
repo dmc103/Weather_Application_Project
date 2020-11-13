@@ -45,6 +45,7 @@ function displayTemp(response) {
 
 function displayForecast(response) {
     let forecastHour = document.querySelector ("#forecast");
+    forecastHour.innerHTML = null;
     let forecast = null;
 
     for (let index = 0; index < 6; index++) {
