@@ -1,10 +1,12 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-image: url(../images/this_is.jpg);
+  background-size: cover;
 }
 
 h1 {
-  color: #645f78;
+  color: #1a284b;
   font-weight: bold;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -12,7 +14,7 @@ h1 {
   font-size: 24px;
 }
 h2 {
-  color: #645f78;
+  color: #1a284b;
   font-weight: bold;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -26,16 +28,20 @@ p {
   padding: 15px;
 }
 
+ul {
+  margin: 0 auto;
+  padding-bottom: 35px;
+}
+
 li {
   list-style: none;
   text-align: right;
   margin-right: 30px;
-  padding: 0;
-  color: #878787;
+  color: #1a284b;
 }
 
 .col-9 strong {
-  color: #878787;
+  color: #1a284b;
   font-weight: bold;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -44,17 +50,17 @@ li {
 }
 
 .container {
-  border: 1px solid #cac8ca;
+  border: 5px solid #cac8ca;
   max-width: 650px;
   margin: 0 auto;
   text-transform: capitalize;
   padding: 25px;
-  color: #878787;
+  color: #1a284b;
 }
 
 .today,
 .skies {
-  color: #878787;
+  color: #1a284b;
   font-weight: 100px;
   width: 618px;
   font-size: 15px;
